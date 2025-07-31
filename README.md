@@ -17,13 +17,13 @@ Prompt Enhancer CLI is a command line tool that helps craft high quality prompts
 
 1. Clone this repository:
    ```bash
-   git clone https://example.com/prompt-enhancer-cli.git
+   git clone https://github.com/bltnico/prompt-enhancer-cli.git
    cd prompt-enhancer-cli
    ```
 2. (Recommended) Create a virtual environment:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use "venv\Scripts\activate"
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows use ".venv\Scripts\activate"
    ```
 3. Install the dependencies:
    ```bash
