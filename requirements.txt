@@ -1,0 +1,6 @@
+typer
+openai
+python-dotenv
+pydantic
+questionary
+pyperclip
