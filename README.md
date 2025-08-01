@@ -1,6 +1,10 @@
 # Prompt Enhancer CLI
 
-Prompt Enhancer CLI is a command line tool that helps craft high quality prompts for large language models. It guides you through a series of clarifying questions and then generates a refined prompt that can be used directly with an LLM.
+_Boost your prompt quality for ChatGPT Agent Mode and other LLMs with smart clarifications._
+
+## About
+
+**Prompt Enhancer CLI** is an open-source command-line tool that improves your prompt engineering process by interactively asking clarifying questions. It generates a well-structured, optimized prompt ready to use across multiple LLM platforms—especially suited for ChatGPT's Agent Mode. Perfect for developers, data scientists, and content creators, it minimizes guesswork and ensures high-quality, consistent outputs.
 
 ## Features
 
@@ -63,7 +67,14 @@ Run the CLI using Python:
 python main.py
 ```
 
-The tool will ask questions about your request and generate a prompt. Use `--no-clipboard` if you do not want the result copied to your clipboard.
+The tool will ask questions about your request and generate a prompt.
+
+## CLI Arguments
+
+| Flag                   | Description                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| `--no-clipboard`       | Prevents the final prompt from being copied to your clipboard.                      |
+| `--keep-user-language` | Generates the final prompt in the same language as your answers instead of English. |
 
 ## Contributing
 
