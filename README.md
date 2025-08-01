@@ -6,6 +6,8 @@ _Boost your prompt quality for ChatGPT Agent Mode and other LLMs with smart clar
 
 **Prompt Enhancer CLI** is an open-source command-line tool that improves your prompt engineering process by interactively asking clarifying questions. It generates a well-structured, optimized prompt ready to use across multiple LLM platforms—especially suited for ChatGPT's Agent Mode. Perfect for developers, data scientists, and content creators, it minimizes guesswork and ensures high-quality, consistent outputs.
 
+![Terminal screenshot](example.png "Terminal screenshot")
+
 ## Features
 
 - Interactive question and answer flow to gather context
