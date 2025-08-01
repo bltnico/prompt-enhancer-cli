@@ -6,12 +6,12 @@ from rich.progress import Progress, SpinnerColumn, TextColumn
 from .utils import get_system_prompt, prepare_generator_prompt
 
 client = OpenAI(
-    base_url=os.environ.get("OPENAI_API_BASE_URL", "https://api.openai.com/v1"),
-    api_key=os.environ.get("OPENAI_API_KEY"),
+    base_url=os.environ.get("LLM_API_BASE_URL", "https://api.openai.com/v1"),
+    api_key=os.environ.get("LLM_API_KEY"),
 )
 
-CONTEXT_MODEL = "gpt-4.1-mini-2025-04-14"
-GENERATOR_MODEL = "gpt-4.1-2025-04-14"
+CONTEXT_MODEL = os.environ.get("LLM_CONTEXT_MODEL","gpt-4.1-mini-2025-04-14")
+GENERATOR_MODEL = os.environ.get("LLM_GENERATOR_MODEL", "gpt-4.1-2025-04-14")
 
 class AskContextSchema(BaseModel):
     questions: list[str]

@@ -11,7 +11,7 @@ Prompt Enhancer CLI is a command line tool that helps craft high quality prompts
 ## Requirements
 
 - Python 3.9 or higher
-- An OpenAI API key
+- An LLM API key
 
 ## Installation
 
@@ -32,12 +32,27 @@ Prompt Enhancer CLI is a command line tool that helps craft high quality prompts
 
 ## Configuration
 
-Create a `.env` file in the project root and provide your OpenAI credentials:
+Create a `.env` file in the project root:
 
 ```ini
-OPENAI_API_KEY=YOUR_API_KEY
-# Optional custom base URL
-# OPENAI_API_BASE_URL=https://api.openai.com/v1
+cp .env.sample .env
+```
+
+Provide your credentials:
+
+```ini
+LLM_API_KEY=YOUR_API_KEY
+
+# Optional
+
+# LLM_API_BASE_URL=
+# default base url: https://api.openai.com/v1
+
+# LLM_CONTEXT_MODEL=
+# default context model: gpt-4.1-mini-2025-04-14
+
+# LLM_GENERATOR_MODEL=
+# default generator model: gpt-4.1-2025-04-14
 ```
 
 ## Usage
