@@ -13,8 +13,15 @@ def get_system_prompt(prompt_file: str) -> str:
     with open(path, encoding="utf-8") as p:
         return p.read()
 
-def prepare_generator_prompt(system_prompt: str, user_prompt: str, context_list: list[str]) -> str:
+def prepare_generator_prompt(
+        system_prompt: str,
+        user_prompt: str,
+        context_list: list[str],
+        keep_user_language: bool,
+    ) -> str:
     context_str = "\n".join(context_list)
+    prompt_language = "Write in **the same language as the ORIGINAL REQUEST**." if keep_user_language else "Write in **English.**"
     system_prompt = system_prompt.replace("<<ORIGINAL_REQUEST>>", user_prompt)
     system_prompt = system_prompt.replace("<<Q_AND_A_BLOCK>>", context_str)
+    system_prompt = system_prompt.replace("<<PROMPT_LANGUAGE>>", prompt_language)
     return system_prompt

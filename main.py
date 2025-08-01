@@ -11,7 +11,11 @@ from lib.utils import select_prompt_output_format
 app = typer.Typer()
 
 @app.command()
-def cli(clipboard: bool = True):
+def cli(keep_user_language: bool = False, clipboard: bool = True):
+    """
+    If --keep-user-language is used, final prompt will be in the user's language.
+    If --clipboard is used, the final prompt will be copied to the clipboard.
+    """
     context: list[str] = []
     user_prompt = typer.prompt("What's your prompt?")
     if not user_prompt:
@@ -26,7 +30,7 @@ def cli(clipboard: bool = True):
     context.append(select_prompt_output_format())
 
     typer.echo("\nGenerating prompt...")
-    final_prompt = llm.generate_prompt(user_prompt, context)
+    final_prompt = llm.generate_prompt(user_prompt, context, keep_user_language)
     typer.echo("Generated prompt:\n")
     typer.echo(final_prompt)
 

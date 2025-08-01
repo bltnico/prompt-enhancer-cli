@@ -36,7 +36,7 @@ def ask_context(user_input: str):
             raise ValueError("No questions generated from the input.")
         return context_schema.questions
 
-def generate_prompt(user_prompt: str, context_list: list[str]) -> str:
+def generate_prompt(user_prompt: str, context_list: list[str], keep_user_language: bool) -> str:
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),
@@ -50,6 +50,7 @@ def generate_prompt(user_prompt: str, context_list: list[str]) -> str:
                 system_prompt=get_system_prompt("generator"),
                 user_prompt=user_prompt,
                 context_list=context_list,
+                keep_user_language=keep_user_language
             ),
         )
 

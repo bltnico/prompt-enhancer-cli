@@ -27,7 +27,7 @@ OUTPUT REQUIREMENTS
 
 3. **Style**
    • Maximum length: **450 words**.
-   • Write in **the same language as the ORIGINAL REQUEST**.
+   • <<PROMPT_LANGUAGE>>
 
 4. **Return Only the Prompt**
    Output nothing except the final prompt.
